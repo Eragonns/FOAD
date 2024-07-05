@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* variables */
+:root {
+  /* typographie */
+  --ff-fraunces: "Fraunces", serif;
+  --ff-montserrat: "Montserrat", sans-serif;
+
+  /* font-weight */
+  --fw-bold: 700;
+  --fw-medium: 500;
+
+  /* font-size */
+  --fs-title: 32px;
+  --fs-text: 14px;
+
+  /* colors */
+  --cl-pure-white: #ffffff;
+  --cl-cream: #f2eae2;
+  --cl-aurometal-saurus: #6c7289;
+  --cl-deep-aquamarine: #3d8168;
+  --cl-deep-aquamarine-hover: #1a4032;
+  --cl-gunmetal: #1c232b;
+}
+/* card */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-montserrat);
+  background-color: var(--cl-cream);
+  min-block-size: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: var(--cl-pure-white);
+  max-inline-size: 600px;
+  min-block-size: 450px;
+  font-size: var(--fs-text);
+  font-weight: var(--fw-medium);
+  line-height: 23px;
+  word-spacing: 1px;
+  display: flex;
+  border-radius: 10px;
+}
+.card__section1 {
+  width: 700px;
+  height: 450px;
+  background: url(./images/image-product-desktop.jpg) no-repeat center;
+  background-size: cover;
+  border-radius: 10px 0 0 10px;
+}
+.card__section2 {
+  padding: 32px;
+}
+.card__st {
+  color: var(--cl-aurometal-saurus);
+  font-size: 0.75em;
+  font-weight: var(--fw-medium);
+  letter-spacing: 6px;
+  word-spacing: 1px;
+  padding-block-end: 20px;
+  line-height: 1.5;
+}
+.card__title {
+  color: var(--cl-gunmetal);
+  font-family: var(--ff-fraunces);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-bold);
+  line-height: 32px;
+  word-spacing: 0.063;
+  padding-block-end: 24px;
+}
+.card__text {
+  color: var(--cl-aurometal-saurus);
+  padding-block-end: 30px;
+  max-inline-size: 237px;
+  line-height: 1.65;
+  word-spacing: 0px;
+}
+/* card prix */
+.card__prices {
+  height: 1.8em;
+  display: flex;
+  justify-content: left;
+  align-items: end;
+}
+.card__price {
+  font-size: var(--fs-title);
+  font-family: var(--ff-fraunces);
+  font-weight: var(--fw-bold);
+  color: var(--cl-deep-aquamarine);
+  padding-inline-end: 0.6em;
+}
+.card__underprice {
+  text-decoration: line-through;
+  color: var(--cl-aurometal-saurus);
+  font-size: 13px;
+}
+/* card bouton */
+.card__btn {
+  background-color: var(--cl-deep-aquamarine);
+  min-inline-size: 236px;
+  width: 100%;
+  max-block-size: 48px;
+  padding-block: 12px;
+  margin-inline: auto;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-block-start: 34.5px;
+}
+.card__btn:hover {
+  background-color: var(--cl-deep-aquamarine-hover);
+}
+.card__lien {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--cl-pure-white);
+  text-decoration: none;
+  font-size: var(--fs-text);
+  font-weight: var(--fw-bold);
+  line-height: 1.8;
+}
+.card__lien__img {
+  padding-inline-end: 10.9px;
+  display: block;
+  height: 16px;
+  object-fit: cover;
+}
+.card__img {
+  display: none;
+}
+/* responsive */
+@media screen and (max-width: 700px) {
+  .card {
+    flex-flow: column nowrap;
+    max-inline-size: 343px;
+    min-block-size: 611px;
+  }
+  .card__section1 {
+    display: none;
+    width: 100%;
+    height: 240px;
+    border-radius: 10px 10px 0 0;
+  }
+  .card__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  .card__section2 {
+    padding: 24px;
+  }
+  .card__st {
+    padding-block-end: 12px;
+    word-spacing: 0;
+  }
+  .card__title {
+    padding-block-end: 16px;
+    word-spacing: 0;
+  }
+  .card__text {
+    padding-block-end: 24px;
+    line-height: 1.65;
+    max-inline-size: 295px;
+  }
+
+  .card__btn {
+    margin-block-start: 26px;
+  }
+  .card__lien {
+    line-height: 1.61;
+  }
+  .card__lien__img {
+    padding-inline-end: 10px;
+  }
+}

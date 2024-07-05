@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* variables */
+:root {
+  /* couleurs */
+  --background-body: #141414;
+  --background-article: #1f1f1f;
+  --background-lien: #333333;
+  --color-text: #ffffff;
+  --color-titre2: #c4f82a;
+
+  /* font */
+  --font-family: "Inter", sans-serif;
+  --fontweight-bold: 700;
+  --fontweight-regular: 400;
+  --fontweight-semibold: 600;
+
+  /* width */
+  --max-width: 90vw;
+  --width: 24em;
+}
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-body);
+  text-align: center;
+  color: var(--color-text);
+}
+/* centre la carte */
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+/* cartes */
+.card {
+  width: var(--width);
+  max-width: var(--max-width);
+  height: 611px;
+  background-color: var(--background-article);
+  margin-inline: auto;
+  font-family: var(--font-family);
+  padding: 2.5em;
+  border-radius: 12px;
+}
+/* carte image */
+.card__img {
+  width: 5.5em;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  height: 5.5em;
+  margin-inline: auto;
+  margin-bottom: 1.5em;
+}
+/* titre de la carte */
+.card__title__h1 {
+  font-weight: var(--fontweight-semibold);
+  font-size: 1.5em;
+  line-height: 1.5;
+  margin-bottom: 4px;
+  vertical-align: top;
+}
+.card__title__h2 {
+  color: var(--color-titre2);
+  font-weight: var(--fontweight-bold);
+  font-size: 0.875em;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  vertical-align: top;
+}
+/* paragraphe de la carte */
+.card__paragraphe {
+  font-weight: var(--fontweight-regular);
+  font-size: 0.875em;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  vertical-align: top;
+}
+/* lien de la carte */
+.card__lien {
+  display: block;
+  background-color: var(--background-lien);
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  margin-inline: auto;
+  font-weight: var(--fontweight-bold);
+  font-size: 0.875em;
+  line-height: 1.5;
+  margin: 16px 0;
+}
+/* hover des liens sur la carte */
+.card__lien:hover {
+  background-color: var(--color-titre2);
+  color: var(--background-body);
+  cursor: pointer;
+}
